@@ -5,20 +5,54 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <TextField id="txtVal1" fx:id="txtVal1" layoutX="75.0" layoutY="157.0" prefHeight="27.0" prefWidth="78.0" />
-      <TextField id="txtVal2" fx:id="txtVal2" layoutX="189.0" layoutY="157.0" prefHeight="27.0" prefWidth="78.0" />
-      <Label layoutX="164.0" layoutY="157.0" text="+">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Button id="btnCalcular" fx:id="btnCalcular" layoutX="287.0" layoutY="157.0" mnemonicParsing="false" onAction="#calcular" text="=" />
-      <Label id="lblSoma" fx:id="lblSoma" layoutX="346.0" layoutY="155.0" text="0" textFill="#6dd72b">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Label>
-   </children>
-</AnchorPane>
+<TitledPane alignment="CENTER" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="412.0" text="Calculadora" textAlignment="CENTER" textFill="#cb05dd" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="427.0">
+         <children>
+            <TextField id="txtResultado" fx:id="txtResultado" layoutX="109.0" layoutY="27.0" prefHeight="33.0" prefWidth="192.0" promptText="0" />
+            <Button fx:id="btnCalcular" layoutX="109.0" layoutY="239.0" mnemonicParsing="false" onAction="#calcular" prefHeight="45.0" prefWidth="193.0" style="-fx-background-color: black;" text="=" textAlignment="CENTER" textFill="#e40ecb">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button id="btn7" fx:id="btn7" layoutX="109.0" layoutY="70.0" mnemonicParsing="false" onAction="#num7" prefHeight="33.0" prefWidth="23.0" text="7" />
+            <Button id="btn8" fx:id="btn8" layoutX="159.0" layoutY="70.0" mnemonicParsing="false" onAction="#num8" prefHeight="33.0" prefWidth="23.0" text="8" />
+            <Button id="btn9" fx:id="btn9" layoutX="208.0" layoutY="70.0" mnemonicParsing="false" onAction="#num9" prefHeight="33.0" prefWidth="23.0" text="9" />
+            <Button id="btn4" fx:id="btn4" layoutX="109.0" layoutY="115.0" mnemonicParsing="false" onAction="#num4" prefHeight="33.0" prefWidth="23.0" text="4" />
+            <Button id="btn1" fx:id="btn1" layoutX="109.0" layoutY="156.0" mnemonicParsing="false" onAction="#num1" prefHeight="33.0" prefWidth="23.0" text="1" />
+            <Button id="btn5" fx:id="btn5" layoutX="159.0" layoutY="115.0" mnemonicParsing="false" onAction="#num5" prefHeight="33.0" prefWidth="23.0" text="5" />
+            <Button id="btn6" fx:id="btn6" layoutX="208.0" layoutY="115.0" mnemonicParsing="false" onAction="#num6" prefHeight="33.0" prefWidth="23.0" text="6" />
+            <Button id="btn2" fx:id="btn2" layoutX="159.0" layoutY="156.0" mnemonicParsing="false" onAction="#num2" prefHeight="33.0" prefWidth="23.0" text="2" />
+            <Button id="btn3" fx:id="btn3" layoutX="208.0" layoutY="156.0" mnemonicParsing="false" onAction="#num3" prefHeight="33.0" prefWidth="23.0" text="3" />
+            <Button id="btn0" fx:id="btn0" layoutX="110.0" layoutY="196.0" mnemonicParsing="false" onAction="#num0" prefHeight="33.0" prefWidth="87.0" text="0" />
+            <Button id="btnSoma" fx:id="btnSoma" layoutX="255.0" layoutY="70.0" mnemonicParsing="false" onAction="#opSomar" prefHeight="33.0" prefWidth="45.0" style="-fx-background-color: black;" text="+" textAlignment="CENTER" textFill="#e40ecb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button id="btnSubtrair" fx:id="btnSubtrair" layoutX="255.0" layoutY="112.0" mnemonicParsing="false" onAction="#opSubtrair" prefHeight="33.0" prefWidth="45.0" style="-fx-background-color: black;" text="-" textAlignment="CENTER" textFill="#e40ecb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button id="btnMultiplicar" fx:id="btnMultiplicar" layoutX="255.0" layoutY="153.0" mnemonicParsing="false" onAction="#opMultiplicar" prefHeight="33.0" prefWidth="45.0" style="-fx-background-color: black;" text="*" textAlignment="CENTER" textFill="#e40ecb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button id="btnDividir" fx:id="btnDividir" layoutX="255.0" layoutY="196.0" mnemonicParsing="false" onAction="#opDividir" prefHeight="33.0" prefWidth="45.0" style="-fx-background-color: black;" text="\%" textAlignment="CENTER" textFill="#e40ecb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button id="btnClear" fx:id="btnClear" layoutX="205.0" layoutY="196.0" mnemonicParsing="false" onAction="#clear" prefHeight="33.0" prefWidth="45.0" style="-fx-background-color: black;" text="C" textAlignment="CENTER" textFill="#e40ecb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+  </content>
+   <font>
+      <Font size="22.0" />
+   </font>
+</TitledPane>
